@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbiilsyxt223l"]
+
+[ext_resource type="Texture2D" uid="uid://bwrgb5qc4rhmn" path="res://textures/green.png" id="1_xtj4t"]
+
+[node name="Board" type="Polygon2D"]
+z_index = 100
+texture = ExtResource("1_xtj4t")
+polygon = PackedVector2Array(0, 0, 0, 1080, 1920, 1080, 1920, 0)

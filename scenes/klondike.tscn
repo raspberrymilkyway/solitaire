@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://1dhpxpw8ai7l"]
+
+[ext_resource type="PackedScene" uid="uid://bbiilsyxt223l" path="res://assets/board.tscn" id="1_a4x8l"]
+[ext_resource type="Texture2D" uid="uid://dsjcjsy101oka" path="res://assets/inks/cardBack-bordRect.png" id="2_7fepv"]
+
+[node name="BoardView" type="Node2D"]
+
+[node name="Board" parent="." instance=ExtResource("1_a4x8l")]
+z_index = -100
+
+[node name="Card" type="Polygon2D" parent="."]
+texture = ExtResource("2_7fepv")
+texture_offset = Vector2(-100, -100)
+polygon = PackedVector2Array(100, 100, 100, 300, 225, 300, 225, 100)
+metadata/backVisible = false
