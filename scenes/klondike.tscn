@@ -1,15 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://1dhpxpw8ai7l"]
+[gd_scene load_steps=8 format=3 uid="uid://1dhpxpw8ai7l"]
 
 [ext_resource type="PackedScene" uid="uid://bbiilsyxt223l" path="res://assets/board.tscn" id="1_a4x8l"]
-[ext_resource type="Texture2D" uid="uid://dsjcjsy101oka" path="res://assets/inks/cardBack-bordRect.png" id="2_7fepv"]
+[ext_resource type="Script" path="res://scripts/LoadKlondike.gd" id="1_oaak6"]
+[ext_resource type="PackedScene" uid="uid://mg4ciiyevpxf" path="res://assets/card.tscn" id="3_v8l8q"]
+[ext_resource type="PackedScene" uid="uid://ig6d4sgwts13" path="res://assets/stack_spade.tscn" id="4_rbu43"]
+[ext_resource type="PackedScene" uid="uid://clasxd62da484" path="res://assets/stack_diamond.tscn" id="5_leiwi"]
+[ext_resource type="PackedScene" uid="uid://c28grrlyqkkix" path="res://assets/stack_club.tscn" id="6_g6sij"]
+[ext_resource type="PackedScene" uid="uid://bouegy7epf4fa" path="res://assets/stack_heart.tscn" id="7_j7h0m"]
 
 [node name="BoardView" type="Node2D"]
+script = ExtResource("1_oaak6")
+metadata/_edit_vertical_guides_ = [961.0, 1921.0]
+metadata/_edit_horizontal_guides_ = [541.0, 1081.0]
 
 [node name="Board" parent="." instance=ExtResource("1_a4x8l")]
 z_index = -100
 
-[node name="Card" type="Polygon2D" parent="."]
-texture = ExtResource("2_7fepv")
-texture_offset = Vector2(-100, -100)
-polygon = PackedVector2Array(100, 100, 100, 300, 225, 300, 225, 100)
-metadata/backVisible = false
+[node name="Card" parent="." instance=ExtResource("3_v8l8q")]
+
+[node name="StackNode" type="Polygon2D" parent="."]
+
+[node name="Stack1" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(99, 425, 99, 980, 249, 980, 249, 425)
+
+[node name="Stack2" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(361, 425, 361, 980, 511, 980, 511, 425)
+
+[node name="Stack3" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(623, 425, 623, 980, 773, 980, 773, 425)
+
+[node name="Stack4" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(885, 425, 885, 980, 1035, 980, 1035, 425)
+
+[node name="Stack5" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1147, 425, 1147, 980, 1297, 980, 1297, 425)
+
+[node name="Stack6" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1409, 425, 1409, 980, 1559, 980, 1559, 425)
+
+[node name="Stack7" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1671, 425, 1671, 980, 1821, 980, 1821, 425)
+
+[node name="StackHand" type="Polygon2D" parent="StackNode"]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(393, 100, 393, 360, 741, 360, 741, 100)
+
+[node name="StackSpade" parent="StackNode" instance=ExtResource("4_rbu43")]
+
+[node name="StackDiamond" parent="StackNode" instance=ExtResource("5_leiwi")]
+
+[node name="StackClub" parent="StackNode" instance=ExtResource("6_g6sij")]
+
+[node name="StackHeart" parent="StackNode" instance=ExtResource("7_j7h0m")]

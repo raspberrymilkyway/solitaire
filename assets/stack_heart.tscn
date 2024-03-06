@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bouegy7epf4fa"]
+
+[ext_resource type="Texture2D" uid="uid://ccmxkm2y33ew4" path="res://assets/inks/pileBack-heart.png" id="1_54v5p"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_3fgoj"]
+
+[node name="StackHeart" type="Polygon2D"]
+color = Color(0, 0, 0, 0.129412)
+polygon = PackedVector2Array(1671, 100, 1671, 360, 1821, 360, 1821, 100)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(1746, 230)
+scale = Vector2(150, -260)
+mesh = SubResource("QuadMesh_3fgoj")
+texture = ExtResource("1_54v5p")

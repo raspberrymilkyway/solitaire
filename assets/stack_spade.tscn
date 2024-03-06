@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ig6d4sgwts13"]
+
+[ext_resource type="Texture2D" uid="uid://kus3ix147eab" path="res://assets/inks/pileBack-spade.png" id="1_k6tmc"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_l5cq8"]
+
+[node name="StackSpade" type="Polygon2D"]
+color = Color(0, 0, 0, 0.129412)
+polygon = PackedVector2Array(885, 100, 885, 360, 1035, 360, 1035, 100)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(960, 230)
+scale = Vector2(150, -260)
+mesh = SubResource("QuadMesh_l5cq8")
+texture = ExtResource("1_k6tmc")

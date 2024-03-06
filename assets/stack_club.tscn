@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c28grrlyqkkix"]
+
+[ext_resource type="Texture2D" uid="uid://ixr2cqkvqo2r" path="res://assets/inks/pileBack-club.png" id="1_lnfuf"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_dcybx"]
+
+[node name="StackClub" type="Polygon2D"]
+color = Color(0, 0, 0, 0.129412)
+polygon = PackedVector2Array(1409, 100, 1409, 360, 1559, 360, 1559, 100)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(1484, 230)
+scale = Vector2(150, -260)
+mesh = SubResource("QuadMesh_dcybx")
+texture = ExtResource("1_lnfuf")

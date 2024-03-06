@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://clasxd62da484"]
+
+[ext_resource type="Texture2D" uid="uid://d3t082cqrhurp" path="res://assets/inks/pileBack-diamond.png" id="1_gyil7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_skq7v"]
+
+[node name="StackDiamond" type="Polygon2D"]
+color = Color(0, 0, 0, 0.129412)
+polygon = PackedVector2Array(1147, 100, 1147, 360, 1297, 360, 1297, 100)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(1222, 229.787)
+scale = Vector2(-150.24, 260.684)
+mesh = SubResource("QuadMesh_skq7v")
+texture = ExtResource("1_gyil7")
